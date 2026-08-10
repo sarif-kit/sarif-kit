@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from types import ModuleType
 
-from . import codespell, pip_audit, platformio, yamllint
+from . import codespell, pip_audit, platformio, pylint, yamllint
 
 #: Tool name to adapter module. The keys are what the CLI's ``--tool`` accepts.
 ADAPTERS: dict[str, ModuleType] = {
@@ -19,6 +19,7 @@ ADAPTERS: dict[str, ModuleType] = {
     yamllint.TOOL_NAME: yamllint,
     codespell.TOOL_NAME: codespell,
     platformio.TOOL_NAME: platformio,
+    pylint.TOOL_NAME: pylint,
 }
 
 

@@ -8,7 +8,7 @@ branding:
 
 inputs:
   tool:
-    description: 'Tool that produced the input: pip-audit, yamllint, codespell, platformio, or auto to detect it from the input itself.'
+    description: 'Tool that produced the input: pip-audit, yamllint, codespell, platformio, pylint, or auto to detect it from the input itself.'
     required: true
   input:
     description: 'File holding the native tool output to convert.'

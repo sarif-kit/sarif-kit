@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fire/decorators.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 103
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Locally disabling bare-except (W0702)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "95c5e3b8f91a8293a6aedeb556a6fb45da022df299da5a1af05f5fe47314865e:0"
+          },
+          "ruleId": "locally-disabled",
+          "ruleIndex": 0
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fire/decorators.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 103
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Suppressed 'bare-except' (from line 103)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "71b6c7499674d9ef7e5dd37877c0e99ddb3de77367e810156f4d0479d6804735:0"
+          },
+          "ruleId": "suppressed-message",
+          "ruleIndex": 1
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fire/formatting.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Locally disabling unused-import (W0611)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "ea2256c926705c8cd0aabea5511fc97535720f77880997e3ffebfedace01abca:0"
+          },
+          "ruleId": "locally-disabled",
+          "ruleIndex": 0
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fire/formatting.py"
+                },
+                "region": {
+                  "endColumn": 17,
+                  "endLine": 18,
+                  "startColumn": 1,
+                  "startLine": 18
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'termcolor'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "6b93042874754e0b433a5e7e1ee00714cd0fb623ba24546d2ecc6db6d6ba952e:0"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 2
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "fire/formatting.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Suppressed 'unused-import' (from line 17)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "a270e6598ac403ee664a43573a5687377e62ddcc581ad20b8426d8f7670df866:0"
+          },
+          "ruleId": "suppressed-message",
+          "ruleIndex": 1
+        }
+      ],
+      "tool": {
+        "driver": {
+          "informationUri": "https://pylint.readthedocs.io/",
+          "name": "pylint",
+          "rules": [
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "I0011, reported by pylint in the info category."
+              },
+              "help": {
+                "markdown": "I0011, reported by pylint in the info category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/information/locally-disabled.html>)",
+                "text": "I0011, reported by pylint in the info category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/information/locally-disabled.html",
+              "id": "locally-disabled",
+              "shortDescription": {
+                "text": "Locally disabling bare-except (W0702)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "I0020, reported by pylint in the info category."
+              },
+              "help": {
+                "markdown": "I0020, reported by pylint in the info category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/information/suppressed-message.html>)",
+                "text": "I0020, reported by pylint in the info category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/information/suppressed-message.html",
+              "id": "suppressed-message",
+              "shortDescription": {
+                "text": "Suppressed 'bare-except' (from line 103)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "E0401, reported by pylint in the error category."
+              },
+              "help": {
+                "markdown": "E0401, reported by pylint in the error category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/error/import-error.html>)",
+                "text": "E0401, reported by pylint in the error category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/error/import-error.html",
+              "id": "import-error",
+              "shortDescription": {
+                "text": "Unable to import 'termcolor'"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

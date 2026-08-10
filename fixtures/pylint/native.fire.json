@@ -1,0 +1,91 @@
+{
+    "messages": [
+        {
+            "type": "info",
+            "symbol": "locally-disabled",
+            "message": "Locally disabling bare-except (W0702)",
+            "messageId": "I0011",
+            "confidence": "UNDEFINED",
+            "module": "fire.decorators",
+            "obj": "",
+            "line": 103,
+            "column": 0,
+            "endLine": null,
+            "endColumn": null,
+            "path": "fire/decorators.py",
+            "absolutePath": "/tmp/python-fire/fire/decorators.py"
+        },
+        {
+            "type": "info",
+            "symbol": "suppressed-message",
+            "message": "Suppressed 'bare-except' (from line 103)",
+            "messageId": "I0020",
+            "confidence": "UNDEFINED",
+            "module": "fire.decorators",
+            "obj": "",
+            "line": 103,
+            "column": 0,
+            "endLine": null,
+            "endColumn": null,
+            "path": "fire/decorators.py",
+            "absolutePath": "/tmp/python-fire/fire/decorators.py"
+        },
+        {
+            "type": "info",
+            "symbol": "locally-disabled",
+            "message": "Locally disabling unused-import (W0611)",
+            "messageId": "I0011",
+            "confidence": "UNDEFINED",
+            "module": "fire.formatting",
+            "obj": "",
+            "line": 17,
+            "column": 0,
+            "endLine": null,
+            "endColumn": null,
+            "path": "fire/formatting.py",
+            "absolutePath": "/tmp/python-fire/fire/formatting.py"
+        },
+        {
+            "type": "error",
+            "symbol": "import-error",
+            "message": "Unable to import 'termcolor'",
+            "messageId": "E0401",
+            "confidence": "UNDEFINED",
+            "module": "fire.formatting",
+            "obj": "",
+            "line": 18,
+            "column": 0,
+            "endLine": 18,
+            "endColumn": 16,
+            "path": "fire/formatting.py",
+            "absolutePath": "/tmp/python-fire/fire/formatting.py"
+        },
+        {
+            "type": "info",
+            "symbol": "suppressed-message",
+            "message": "Suppressed 'unused-import' (from line 17)",
+            "messageId": "I0020",
+            "confidence": "UNDEFINED",
+            "module": "fire.formatting",
+            "obj": "",
+            "line": 17,
+            "column": 0,
+            "endLine": null,
+            "endColumn": null,
+            "path": "fire/formatting.py",
+            "absolutePath": "/tmp/python-fire/fire/formatting.py"
+        }
+    ],
+    "statistics": {
+        "messageTypeCount": {
+            "fatal": 0,
+            "error": 1,
+            "warning": 0,
+            "refactor": 0,
+            "convention": 0,
+            "info": 4
+        },
+        "modulesLinted": 5,
+        "score": 9.425287356321839
+    }
+}

@@ -8,7 +8,7 @@ import pytest
 
 from sarif_kit import SarifBuilder, assert_valid
 from sarif_kit.adapters import ADAPTERS, detect_tool, get_adapter
-from sarif_kit.adapters import codespell, pip_audit, platformio, yamllint
+from sarif_kit.adapters import codespell, pip_audit, platformio, pylint, yamllint
 
 from .utils import assert_matches_golden, read_fixture
 
@@ -21,6 +21,8 @@ CASES = [
     ("codespell", "codespell/native.txt", "codespell.native.sarif.json"),
     ("codespell", "codespell/native.multi.txt", "codespell.multi.sarif.json"),
     ("platformio", "platformio/native.fastled.json", "platformio.fastled.sarif.json"),
+    ("pylint", "pylint/native.requests.json", "pylint.requests.sarif.json"),
+    ("pylint", "pylint/native.fire.json", "pylint.fire.sarif.json"),
 ]
 
 # Which adapter each fixture belongs to; vulture has no adapter, so nothing claims it.
@@ -32,6 +34,8 @@ OWNERS = {
     "codespell/native.txt": "codespell",
     "codespell/native.multi.txt": "codespell",
     "platformio/native.fastled.json": "platformio",
+    "pylint/native.requests.json": "pylint",
+    "pylint/native.fire.json": "pylint",
     "vulture/native.txt": None,
 }
 
@@ -436,3 +440,209 @@ def test_platformio_one_rule_per_check_id():
 def test_platformio_rejects_json_that_is_not_pio_check():
     with pytest.raises(ValueError, match="JSON array"):
         platformio.convert('{"dependencies": []}')
+
+
+# -- pylint ---------------------------------------------------------------------
+
+
+def message(**overrides) -> dict:
+    """One entry of a `pylint --output-format=json2` ``messages`` list."""
+    base = {
+        "type": "warning",
+        "symbol": "unused-import",
+        "message": "Unused import os",
+        "messageId": "W0611",
+        "confidence": "UNDEFINED",
+        "module": "demo",
+        "obj": "",
+        "line": 1,
+        "column": 0,
+        "endLine": 1,
+        "endColumn": 9,
+        "path": "demo.py",
+        "absolutePath": "/repo/demo.py",
+    }
+    return {**base, **overrides}
+
+
+def pyl(*messages: dict) -> str:
+    """A `pylint --output-format=json2` document wrapping ``messages``."""
+    counts = {"fatal": 0, "error": 0, "warning": 0, "refactor": 0, "convention": 0, "info": 0}
+    for entry in messages:
+        counts[entry["type"]] = counts.get(entry["type"], 0) + 1
+    statistics = {"messageTypeCount": counts, "modulesLinted": 1, "score": 5.0}
+    return json.dumps({"messages": list(messages), "statistics": statistics})
+
+
+def test_pylint_rule_id_is_the_symbol_and_the_code_is_in_the_description():
+    rules, results = pylint.convert(pyl(message()))
+    assert [r.id for r in rules] == ["unused-import"]
+    # SARIF wants a legible id and an opaque one is no use as a name, so the code lives
+    # in the description rather than being put in the slot meant for a readable name.
+    assert rules[0].name is None
+    assert rules[0].short_description == "Unused import os"
+    assert rules[0].full_description == "W0611, reported by pylint in the warning category."
+    assert rules[0].default_level == "warning"
+    assert results[0].rule_id == "unused-import"
+    assert results[0].message == "Unused import os"
+
+
+def test_pylint_shifts_columns_out_of_zero_based_numbering():
+    # pylint counts columns from 0 and SARIF from 1. `x` at 0-based column 4 is SARIF
+    # column 5, and the end position moves with it: both formats point one past the end.
+    _, results = pylint.convert(pyl(message(line=6, column=4, endLine=6, endColumn=5)))
+    location = results[0].location
+    assert (location.start_line, location.start_column) == (6, 5)
+    assert (location.end_line, location.end_column) == (6, 6)
+
+
+def test_pylint_keeps_a_column_that_starts_the_line():
+    # Column 0 is the common case for whole-line messages, and must not be dropped.
+    _, results = pylint.convert(pyl(message(column=0)))
+    assert results[0].location.start_column == 1
+
+
+def test_pylint_maps_every_message_type():
+    types = ["fatal", "error", "warning", "refactor", "convention", "info"]
+    raw = pyl(*(message(type=t, symbol=f"s-{t}") for t in types))
+    rules, results = pylint.convert(raw)
+    assert [r.level for r in results] == ["error", "error", "warning", "note", "note", "note"]
+    assert [r.default_level for r in rules] == ["error", "error", "warning", "note", "note", "note"]
+
+
+@pytest.mark.parametrize(
+    ("message_type", "symbol", "expected"),
+    [
+        ("convention", "line-too-long", "convention/line-too-long.html"),
+        ("error", "import-error", "error/import-error.html"),
+        ("fatal", "fatal", "fatal/fatal.html"),
+        # The docs spell the info category out in full.
+        ("info", "locally-disabled", "information/locally-disabled.html"),
+    ],
+)
+def test_pylint_help_uri_points_at_the_message_docs(message_type, symbol, expected):
+    rules, _ = pylint.convert(pyl(message(type=message_type, symbol=symbol)))
+    assert rules[0].help_uri == "https://pylint.readthedocs.io/en/stable/user_guide/messages/" + expected
+
+
+def test_pylint_plugin_message_keeps_its_category():
+    # A plugin registers under one of pylint's own letters (W5101 here), so its findings
+    # get the right level. Only its symbol is unknown, and that page does not exist.
+    rules, results = pylint.convert(pyl(message(type="warning", symbol="house-style", messageId="W5101")))
+    assert results[0].level == "warning"
+    assert rules[0].help_uri.endswith("/warning/house-style.html")
+
+
+def test_pylint_unrecognised_type_falls_back_to_the_project_docs():
+    # Unreachable from pylint itself, which rejects a message id outside its six
+    # categories. It covers a damaged document, and a category a later release may add.
+    raw = json.dumps({"messages": [message(type="quality")], "statistics": {"messageTypeCount": {}}})
+    rules, _ = pylint.convert(raw)
+    assert rules[0].help_uri == pylint.INFORMATION_URI
+    assert rules[0].default_level == "warning"
+
+
+def test_pylint_rule_title_is_the_first_line_only():
+    # duplicate-code puts the offending source in the message. The whole block as an
+    # alert title makes the list unreadable, so only the first line becomes the title.
+    body = "Similar lines in 2 files\n==a:[1:5]\n==b:[9:13]\n    stream=stream,\n    timeout=timeout,"
+    rules, results = pylint.convert(pyl(message(symbol="duplicate-code", messageId="R0801", message=body)))
+    assert rules[0].short_description == "Similar lines in 2 files"
+    # The detail is worth keeping, just not in the title.
+    assert results[0].message == body
+
+
+def test_pylint_clips_an_oversized_message():
+    # fixme quotes the comment it found, so one long TODO runs past GitHub's 1024-character
+    # cap on rule description text. A real capture of this reached 2290 characters.
+    long_todo = "TODO: " + "refactor this whole subsystem because " * 60
+    rules, results = pylint.convert(pyl(message(symbol="fixme", messageId="W0511", message=long_todo)))
+    assert len(rules[0].short_description) == 1024
+    assert rules[0].short_description.endswith("... (truncated)")
+    assert len(results[0].message) == 1024
+
+
+def test_pylint_title_is_clipped_on_its_own():
+    # Clipping the whole message first would eat into a first line that fits by itself.
+    body = "A" * 1010 + "\n" + "B" * 200
+    rules, results = pylint.convert(pyl(message(message=body)))
+    assert rules[0].short_description == "A" * 1010
+    assert len(results[0].message) == 1024
+
+
+def test_pylint_statistics_without_real_counts_is_not_pylint():
+    raw = '{"messages": [], "statistics": {"messageTypeCount": null}}'
+    assert pylint.detect(raw) is False
+    with pytest.raises(ValueError, match="statistics"):
+        pylint.convert(raw)
+
+
+def test_pylint_malformed_message_raises():
+    # Skipping the bad entry would upload a clean-looking run built from a damaged capture.
+    raw = json.dumps({"messages": [None], "statistics": {"messageTypeCount": {"warning": 1}}})
+    with pytest.raises(ValueError, match="not an object"):
+        pylint.convert(raw)
+
+
+def test_pylint_rejects_json_that_is_not_pylint():
+    # detect() refuses it, but naming the tool explicitly bypasses detection, and a
+    # foreign document converting to zero findings would look like a clean run.
+    with pytest.raises(ValueError, match="statistics"):
+        pylint.convert('{"messages": [], "tool": "something-else"}')
+
+
+def test_pylint_missing_end_position_is_left_out():
+    _, results = pylint.convert(pyl(message(endLine=None, endColumn=None)))
+    location = results[0].location
+    assert (location.start_line, location.start_column) == (1, 1)
+    assert (location.end_line, location.end_column) == (None, None)
+
+
+def test_pylint_one_rule_per_symbol():
+    raw = pyl(message(), message(line=2, message="Unused import sys"), message(symbol="unused-variable"))
+    rules, results = pylint.convert(raw)
+    assert [r.id for r in rules] == ["unused-import", "unused-variable"]
+    assert rules[0].short_description == "Unused import os"
+    assert len(results) == 3
+
+
+def test_pylint_clean_run_is_an_empty_success():
+    assert pylint.convert(pyl()) == ([], [])
+
+
+def test_pylint_empty_input_raises():
+    # pylint writes a JSON document even when it finds nothing, so an empty file means
+    # the run itself failed. Converting it to zero findings would hide that.
+    with pytest.raises(ValueError, match="empty input"):
+        pylint.convert("  \n\n")
+
+
+def test_pylint_rejects_the_older_json_format():
+    # `--output-format=json` writes a bare array with no statistics block, so nothing in
+    # it says pylint, and it spells the code 'message-id'. Positions it does carry.
+    raw = json.dumps([{"type": "warning", "symbol": "unused-import", "path": "demo.py", "line": 1}])
+    assert pylint.detect(raw) is False
+    with pytest.raises(ValueError, match="messages"):
+        pylint.convert(raw)
+
+
+def test_pylint_real_capture_keeps_position_and_level():
+    _, results = pylint.convert(read_fixture("pylint/native.requests.json"))
+    first = results[0]
+    assert first.rule_id == "line-too-long"
+    assert first.message == "Line too long (137/100)"
+    assert (first.location.uri, first.location.start_line, first.location.start_column) == (
+        "src/requests/sessions.py",
+        96,
+        1,
+    )
+    assert first.level == "note"
+
+
+def test_pylint_real_capture_carries_the_information_category():
+    rules, results = pylint.convert(read_fixture("pylint/native.fire.json"))
+    levels = {r.rule_id: r.level for r in results}
+    assert levels["locally-disabled"] == "note"
+    assert levels["import-error"] == "error"
+    help_uris = {r.id: r.help_uri for r in rules}
+    assert help_uris["locally-disabled"].endswith("/information/locally-disabled.html")

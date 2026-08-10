@@ -64,6 +64,14 @@ jobs:
               (cd fixtures/platformio/input &&
               uvx platformio check --json-output > "$GITHUB_WORKSPACE/native.out")
             extra: --src-root "$GITHUB_WORKSPACE"
+          # No || true either: --exit-zero clears the findings bit mask but still
+          # exits 32 on a usage error, so a broken flag fails the step instead of
+          # writing an empty file.
+          - tool: pylint
+            capture: >
+              uvx pylint --exit-zero --output-format=json2
+              fixtures/pylint/input.py > native.out
+            extra: ""
     steps:
       - uses: actions/checkout@v7
       - name: Install uv

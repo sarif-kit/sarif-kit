@@ -32,6 +32,7 @@ nav:
   - yamllint: yamllint.md
   - codespell: codespell.md
   - PlatformIO check: platformio.md
+  - pylint: pylint.md
 
 markdown_extensions:
   - tables

@@ -35,9 +35,10 @@ The tool that produced the input.
 One of
 .BR pip-audit ,
 .BR yamllint ,
-.B codespell
+.BR codespell ,
+.B platformio
 or
-.BR platformio .
+.BR pylint .
 .TP
 .B \-\-auto
 Detect the tool from the shape of the input instead of naming it.
@@ -141,6 +142,17 @@ absolute and need \-\-src\-root:
 .RS
 pio check \-\-json\-output > pio\-check.json
 sarif-kit convert \-\-tool platformio \-i pio\-check.json \-o pio\-check.sarif \-\-src\-root .
+.RE
+.fi
+.PP
+Lint Python.
+pylint encodes what it found in its exit code, and \-\-exit\-zero clears that
+without hiding a usage error, which still exits 32:
+.PP
+.nf
+.RS
+pylint \-\-exit\-zero \-\-output\-format=json2 src > pylint.json
+sarif-kit convert \-\-tool pylint \-i pylint.json \-o pylint.sarif
 .RE
 .fi
 .PP

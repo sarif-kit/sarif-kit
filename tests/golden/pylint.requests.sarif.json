@@ -1,0 +1,2164 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 96
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Line too long (137/100)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "2e9c8d419e14563744b8b838d0ba363f88418db9e978746c610cd0bd49763daf:0"
+          },
+          "ruleId": "line-too-long",
+          "ruleIndex": 0
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 820
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Line too long (106/100)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "50052a15cb8b237e45d1592064debac9554e72e9029a1da013980dfc41fb40ed:0"
+          },
+          "ruleId": "line-too-long",
+          "ruleIndex": 0
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 27,
+                  "endLine": 127,
+                  "startColumn": 1,
+                  "startLine": 127
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Missing class docstring"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "9fc1199eec8249ef7ebcbcf0c0c0a59f5d3ce033681a96f9943019ec78300035:0"
+          },
+          "ruleId": "missing-class-docstring",
+          "ruleIndex": 1
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 132,
+                  "startColumn": 5,
+                  "startLine": 132
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Missing function or method docstring"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "599ce019dad44cfd40146fe3af1a3344018dfdafa24478cd00f2da4bfb2032d9:0"
+          },
+          "ruleId": "missing-function-docstring",
+          "ruleIndex": 2
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 44,
+                  "endLine": 132,
+                  "startColumn": 20,
+                  "startLine": 132
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unused argument 'request'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "4b116d03fc7a25f006057a70ee9a0f6920db72fba0ec5980ef917b2310a14640:0"
+          },
+          "ruleId": "unused-argument",
+          "ruleIndex": 3
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 132
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unused argument 'kwargs'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "de6900c0bef4d8dbedb1ae1154188413bd8370ca19ef5777962cb77eea158d72:0"
+          },
+          "ruleId": "unused-argument",
+          "ruleIndex": 3
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 186,
+                  "startColumn": 5,
+                  "startLine": 186
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many arguments (8/5)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "87b627f931170cd89172cb7f224e18457853d6ffabaa465138f6f8f2b1736fed:0"
+          },
+          "ruleId": "too-many-arguments",
+          "ruleIndex": 4
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 186,
+                  "startColumn": 5,
+                  "startLine": 186
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many positional arguments (8/5)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "f3a92828f09dfe72c14e23a6a1fc14bf3ef07f4ec71b6e4b8ef41f62d8ed750e:0"
+          },
+          "ruleId": "too-many-positional-arguments",
+          "ruleIndex": 5
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 186,
+                  "startColumn": 5,
+                  "startLine": 186
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many local variables (21/15)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "a63518c26c7dd5063e06a65d8ac884162dc70769d996117d2c5ac1445411bd8c:0"
+          },
+          "ruleId": "too-many-locals",
+          "ruleIndex": 6
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 69,
+                  "endLine": 266,
+                  "startColumn": 44,
+                  "startLine": 266
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Access to a protected member _cookies of a client class"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "4ef6fe5509997162b3efeca15b55a0caf3267905be0e40af42d9d68083706aa3:0"
+          },
+          "ruleId": "protected-access",
+          "ruleIndex": 7
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 57,
+                  "endLine": 278,
+                  "startColumn": 26,
+                  "startLine": 278
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Access to a protected member _body_position of a client class"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "e91fafd28f9ecbebc16c7cc23226dbaec7d285927e3812a720b5891b5ec2d47d:0"
+          },
+          "ruleId": "protected-access",
+          "ruleIndex": 7
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 18,
+                  "endLine": 301,
+                  "startColumn": 17,
+                  "startLine": 292
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Assigning result of a function call, where the function has no return"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "f4b560a7a2ba60fbbb7e0cc2129c9919c7d2b7dc6967ddcccab5c4fd0d25973f:0"
+          },
+          "ruleId": "assignment-from-no-return",
+          "ruleIndex": 8
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 186,
+                  "startColumn": 5,
+                  "startLine": 186
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many branches (13/12)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "6d6fa19c0e284a6fa8529474b75f88575859656d091c4b7e4c77e35ef4a732be:0"
+          },
+          "ruleId": "too-many-branches",
+          "ruleIndex": 9
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 186,
+                  "startColumn": 5,
+                  "startLine": 186
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many statements (52/50)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "8adb5c715bd00883410fb38ff47e3d49c5b0495569d6d49516451f903b864c6f:0"
+          },
+          "ruleId": "too-many-statements",
+          "ruleIndex": 10
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 14,
+                  "endLine": 395,
+                  "startColumn": 1,
+                  "startLine": 395
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many instance attributes (12/7)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "ccdc9d908695c889ea1aecb777d8744f418389af0fe8f0bf74ef480e1eb3cd58:0"
+          },
+          "ruleId": "too-many-instance-attributes",
+          "ruleIndex": 11
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 16,
+                  "endLine": 557,
+                  "startColumn": 5,
+                  "startLine": 557
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many arguments (16/5)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "960ce3891d78b225f60a43c48055bdd76c2367add3f2c9bc770d59c73dd229c3:0"
+          },
+          "ruleId": "too-many-arguments",
+          "ruleIndex": 4
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 16,
+                  "endLine": 557,
+                  "startColumn": 5,
+                  "startLine": 557
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many positional arguments (16/5)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "b59c32c6d0a164ceaab81f3260b8089575d62a57a5d40ee6c9073a4a5d104caf:0"
+          },
+          "ruleId": "too-many-positional-arguments",
+          "ruleIndex": 5
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 16,
+                  "endLine": 557,
+                  "startColumn": 5,
+                  "startLine": 557
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many local variables (22/15)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "0678c56649c30254dc2b5c9a471b1cf729f40d1e6a014da422579d90f356632a:0"
+          },
+          "ruleId": "too-many-locals",
+          "ruleIndex": 6
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 45,
+                  "endLine": 805,
+                  "startColumn": 23,
+                  "startLine": 805
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unnecessary use of a comprehension, use list(gen) instead."
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "65a3751fa8b801fcd2e1c6240fe8738673c03c2b722e14dac57b7a0f7fbd7fd4:0"
+          },
+          "ruleId": "unnecessary-comprehension",
+          "ruleIndex": 12
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 24,
+                  "endLine": 820,
+                  "startColumn": 17,
+                  "startLine": 820
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Access to a protected member _next of a client class"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "b47715be3cec533689d7226c578b5797128380f641cf69546358835ddd1c1ba8:0"
+          },
+          "ruleId": "protected-access",
+          "ruleIndex": 7
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 22,
+                  "endLine": 827,
+                  "startColumn": 13,
+                  "startLine": 827
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Statement seems to have no effect"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "cedc1ea70f55e6c303e56bec4e93481b3506e45c749d264c5c92564c269b85ba:0"
+          },
+          "ruleId": "pointless-statement",
+          "ruleIndex": 13
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 2,
+                  "endLine": 45,
+                  "startColumn": 1,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unused REDIRECT_STATI imported from models"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "a60a55d14e85ecc70a7abbc92c2a4041272b1333e8a84125091a7b81a6f4e416:0"
+          },
+          "ruleId": "unused-import",
+          "ruleIndex": 14
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/sessions.py"
+                },
+                "region": {
+                  "endColumn": 2,
+                  "endLine": 59,
+                  "startColumn": 1,
+                  "startLine": 48
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unused should_bypass_proxies imported from utils"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "746ee136ee3cb4dfc04087a8745ed09c3472dd87fcfff5c7ca188c12cb52a166:0"
+          },
+          "ruleId": "unused-import",
+          "ruleIndex": 14
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 699
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Line too long (112/100)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "89420259f72c0f019ce465e4fe5de7c155774bdb99d6feedcf57aacc6b3c2561:0"
+          },
+          "ruleId": "line-too-long",
+          "ruleIndex": 0
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "startColumn": 18,
+                  "startLine": 715
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "TODO: Remove this in 3.0.0: see #2811"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "a66940889f858f5acebd021fb4a247c4ddfa2e45d0a71862cb55db1fc3e08555:0"
+          },
+          "ruleId": "fixme",
+          "ruleIndex": 15
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 2,
+                  "endLine": 50,
+                  "startColumn": 1,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Redefining built-in 'ConnectionError'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "d8c6442d0c6c66f276af0373742478c045712c543a05981b3ff276bbff427e56:0"
+          },
+          "ruleId": "redefined-builtin",
+          "ruleIndex": 16
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 2,
+                  "endLine": 26,
+                  "startColumn": 1,
+                  "startLine": 17
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.exceptions'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "7e31513bc15ca29f2380d63408c8c1dc67bc7630dbb56b2e9f98f9beb21b9ff4:0"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 55,
+                  "endLine": 27,
+                  "startColumn": 1,
+                  "startLine": 27
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.exceptions'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "7e31513bc15ca29f2380d63408c8c1dc67bc7630dbb56b2e9f98f9beb21b9ff4:1"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 63,
+                  "endLine": 28,
+                  "startColumn": 1,
+                  "startLine": 28
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.exceptions'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "7e31513bc15ca29f2380d63408c8c1dc67bc7630dbb56b2e9f98f9beb21b9ff4:2"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 57,
+                  "endLine": 29,
+                  "startColumn": 1,
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.exceptions'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "7e31513bc15ca29f2380d63408c8c1dc67bc7630dbb56b2e9f98f9beb21b9ff4:3"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 53,
+                  "endLine": 30,
+                  "startColumn": 1,
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.exceptions'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "7e31513bc15ca29f2380d63408c8c1dc67bc7630dbb56b2e9f98f9beb21b9ff4:4"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 60,
+                  "endLine": 31,
+                  "startColumn": 1,
+                  "startLine": 31
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.poolmanager'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "fa6a0dbbde15b1fbc1df21e241d945b32c1a460fc7dd8b474ab0d99313aad808:0"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 49,
+                  "endLine": 32,
+                  "startColumn": 1,
+                  "startLine": 32
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.util'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "ca6000b17103ef5580c0646b33da5e488d94f281de8efd9543272593c3966f58:0"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 35,
+                  "endLine": 33,
+                  "startColumn": 1,
+                  "startLine": 33
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.util'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "ca6000b17103ef5580c0646b33da5e488d94f281de8efd9543272593c3966f58:1"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 37,
+                  "endLine": 34,
+                  "startColumn": 1,
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unable to import 'urllib3.util.retry'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "1fa1fb1da4c505726f706ac866a8da3b7ae7778b9ad8f65bb91c1f755633d382:0"
+          },
+          "ruleId": "import-error",
+          "ruleIndex": 17
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 66,
+                  "startColumn": 5,
+                  "startLine": 66
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Missing function or method docstring"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "9211a92f453ffbe17c8e03051dc759338c462d7dc0944853d435aa68b8011eb3:0"
+          },
+          "ruleId": "missing-function-docstring",
+          "ruleIndex": 2
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 26,
+                  "endLine": 66,
+                  "startColumn": 5,
+                  "startLine": 66
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Function name \"SOCKSProxyManager\" doesn't conform to snake_case naming style"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "4a2d4ec76a4006f327ecf3b692b24f44419b934f9cd9cc397abe18da6d1efd95:0"
+          },
+          "ruleId": "invalid-name",
+          "ruleIndex": 18
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 64,
+                  "endLine": 72,
+                  "startColumn": 5,
+                  "startLine": 72
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Reimport 'PoolManager' (imported line 31)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "6f7a8f5cfe72c071c403463605b2cf6c97eb04ac837be06b78690e04b8dcc5f5:0"
+          },
+          "ruleId": "reimported",
+          "ruleIndex": 19
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 48,
+                  "endLine": 77,
+                  "startColumn": 1,
+                  "startLine": 77
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Import \"from ._types import is_prepared as _is_prepared\" should be placed at the top of the module"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "45fddadbe1d457dd29cc2152a630f70928b982ca92b645098a5d374596d6e463:0"
+          },
+          "ruleId": "wrong-import-position",
+          "ruleIndex": 20
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 29,
+                  "endLine": 89,
+                  "startColumn": 5,
+                  "startLine": 89
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unused argument 'poolmanager'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "210ae86ceef853a1946cdc92748e5fcc063cef7fb095aeb5e613d62e6985e70a:0"
+          },
+          "ruleId": "unused-argument",
+          "ruleIndex": 3
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 17,
+                  "endLine": 125,
+                  "startColumn": 5,
+                  "startLine": 125
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Useless parent or super() delegation in method '__init__'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "d4c63e661a693e6c42931ab4bf6a9e0f638cfa31c87bca252362b5e21608aa48:0"
+          },
+          "ruleId": "useless-parent-delegation",
+          "ruleIndex": 21
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 128,
+                  "startColumn": 5,
+                  "startLine": 128
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many arguments (6/5)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "7ed1199722cb36318e1f176fa7cd48cdfebfbf02b5fe2833b6c3fdc1a5e36fed:0"
+          },
+          "ruleId": "too-many-arguments",
+          "ruleIndex": 4
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 128,
+                  "startColumn": 5,
+                  "startLine": 128
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many positional arguments (6/5)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "dfe5fe9c0b9ebbaff6e01d9a8adb89b453a5eb715bc019117a3fc8ce32af5304:0"
+          },
+          "ruleId": "too-many-positional-arguments",
+          "ruleIndex": 5
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 49,
+                  "endLine": 491,
+                  "startColumn": 13,
+                  "startLine": 491
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise InvalidURL(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "3bd3d5c3dfe22706d4236d2a735ae5b67c7324458d7b48c5a53be5847aed169c:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 611,
+                  "startColumn": 9,
+                  "startLine": 611
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unnecessary pass statement"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "5f790f390fb770a869c3e96b30ab8d88e0eca1aae7e34713339d7972511f46d7:0"
+          },
+          "ruleId": "unnecessary-pass",
+          "ruleIndex": 23
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 634,
+                  "startColumn": 5,
+                  "startLine": 634
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many arguments (6/5)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "7ed1199722cb36318e1f176fa7cd48cdfebfbf02b5fe2833b6c3fdc1a5e36fed:1"
+          },
+          "ruleId": "too-many-arguments",
+          "ruleIndex": 4
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 634,
+                  "startColumn": 5,
+                  "startLine": 634
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many positional arguments (6/5)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "dfe5fe9c0b9ebbaff6e01d9a8adb89b453a5eb715bc019117a3fc8ce32af5304:1"
+          },
+          "ruleId": "too-many-positional-arguments",
+          "ruleIndex": 5
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 634,
+                  "startColumn": 5,
+                  "startLine": 634
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many local variables (16/15)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "610bf20da2389ccb8208e60c7bc5a4706cc6fc9c05dd499c0114c0af06aa5e34:0"
+          },
+          "ruleId": "too-many-locals",
+          "ruleIndex": 6
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 49,
+                  "endLine": 666,
+                  "startColumn": 13,
+                  "startLine": 666
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise InvalidURL(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "3bd3d5c3dfe22706d4236d2a735ae5b67c7324458d7b48c5a53be5847aed169c:1"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 18,
+                  "endLine": 689,
+                  "startColumn": 17,
+                  "startLine": 686
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'except ValueError as exc' and 'raise ValueError(f'Invalid timeout {timeout}. Pass a (connect, read) timeout tuple, or a single float to set both timeouts to the same value.') from exc'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "f8b830b697979300558fcbe4ce763b1d2a0cd6d1bbdc3254e8ec2fac9f2efa09:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 56,
+                  "endLine": 711,
+                  "startColumn": 13,
+                  "startLine": 711
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise ConnectionError(err, request=request) from err'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "a6fbee7344eeb310f75e9e71eee6d9167c5557471a521adbf0ad2f04cb79664d:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 61,
+                  "endLine": 717,
+                  "startColumn": 21,
+                  "startLine": 717
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise ConnectTimeout(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "595359e25cbd152f58a51d36e224312b93998d1f6db2bba8afebe45bd65d1986:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 53,
+                  "endLine": 720,
+                  "startColumn": 17,
+                  "startLine": 720
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise RetryError(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "329ad036bdde75f4b7d4ed557076c2d1b2dd435a5443c5da29c91853c2f1dd8b:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 53,
+                  "endLine": 723,
+                  "startColumn": 17,
+                  "startLine": 723
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise ProxyError(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "0c77bf91cb531ee283f9d22ca2f75e9f8b99102ac5a4c5d3a092b47c1116ea58:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 727,
+                  "startColumn": 17,
+                  "startLine": 727
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise SSLError(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "0c013d78fce7d86c7a3699431a7ef42fb26cf77f8484ed7601ac7a89f42bb471:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 54,
+                  "endLine": 729,
+                  "startColumn": 13,
+                  "startLine": 729
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise ConnectionError(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "94d68e89b579b677f39a34ce04695d76f0155b0650dad59380297fa731ab99aa:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 54,
+                  "endLine": 732,
+                  "startColumn": 13,
+                  "startLine": 732
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise ConnectionError(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "94d68e89b579b677f39a34ce04695d76f0155b0650dad59380297fa731ab99aa:1"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 32,
+                  "endLine": 735,
+                  "startColumn": 13,
+                  "startLine": 735
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise ProxyError(e) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "92308915b06cdd285829b4182b1678024ac700f2607060137985725a878ddda1:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 22,
+                  "endLine": 746,
+                  "startColumn": 13,
+                  "startLine": 738
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unnecessary \"elif\" after \"raise\", remove the leading \"el\" from \"elif\""
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "efd520a850b496354e9d2c0f7c0ca198cd206b59f9579654ec74fa48ccd6f9ab:0"
+          },
+          "ruleId": "no-else-raise",
+          "ruleIndex": 24
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 51,
+                  "endLine": 740,
+                  "startColumn": 17,
+                  "startLine": 740
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise SSLError(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "0c013d78fce7d86c7a3699431a7ef42fb26cf77f8484ed7601ac7a89f42bb471:1"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 54,
+                  "endLine": 742,
+                  "startColumn": 17,
+                  "startLine": 742
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise ReadTimeout(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "2a33297685b1f0b4c1760f37bdee64a505375f8c5667153ca2de77ac58ed9d8c:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 56,
+                  "endLine": 744,
+                  "startColumn": 17,
+                  "startLine": 744
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Consider explicitly re-raising using 'raise InvalidHeader(e, request=request) from e'"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "53f2561f2321b984087ac22afcb9d7320b43a2112f48410776ed7cc60d98cfc9:0"
+          },
+          "ruleId": "raise-missing-from",
+          "ruleIndex": 22
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 634,
+                  "startColumn": 5,
+                  "startLine": 634
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many branches (19/12)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "d707d9c2fe29407ec4dac9ba50946c333c5e39e05133aa4f92d11ae43d256b2b:0"
+          },
+          "ruleId": "too-many-branches",
+          "ruleIndex": 9
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 634,
+                  "startColumn": 5,
+                  "startLine": 634
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Too many statements (52/50)"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "bd1e65dc8b33bd323dc43fea33a269f5bc40dd1acf5a37a36b50c761db402271:0"
+          },
+          "ruleId": "too-many-statements",
+          "ruleIndex": 10
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "endColumn": 14,
+                  "endLine": 12,
+                  "startColumn": 1,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Unused import socket"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "f34608ba013e54529e1772f8782c4472b2bdf161db7ce29add9feb97c4fee4b3:0"
+          },
+          "ruleId": "unused-import",
+          "ruleIndex": 14
+        },
+        {
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/requests/adapters.py"
+                },
+                "region": {
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Similar lines in 2 files\n==requests.adapters:[671:676]\n==requests.sessions:[293:298]\n            stream=stream,\n            timeout=timeout,\n            verify=verify,\n            cert=cert,\n            proxies=proxies,"
+          },
+          "partialFingerprints": {
+            "sarifKit/v1": "2861b536d94b2b1b657fdd159844eefd9a04d96f5fc62c9577376707636db71d:0"
+          },
+          "ruleId": "duplicate-code",
+          "ruleIndex": 25
+        }
+      ],
+      "tool": {
+        "driver": {
+          "informationUri": "https://pylint.readthedocs.io/",
+          "name": "pylint",
+          "rules": [
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "C0301, reported by pylint in the convention category."
+              },
+              "help": {
+                "markdown": "C0301, reported by pylint in the convention category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/line-too-long.html>)",
+                "text": "C0301, reported by pylint in the convention category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/line-too-long.html",
+              "id": "line-too-long",
+              "shortDescription": {
+                "text": "Line too long (137/100)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "C0115, reported by pylint in the convention category."
+              },
+              "help": {
+                "markdown": "C0115, reported by pylint in the convention category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/missing-class-docstring.html>)",
+                "text": "C0115, reported by pylint in the convention category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/missing-class-docstring.html",
+              "id": "missing-class-docstring",
+              "shortDescription": {
+                "text": "Missing class docstring"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "C0116, reported by pylint in the convention category."
+              },
+              "help": {
+                "markdown": "C0116, reported by pylint in the convention category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/missing-function-docstring.html>)",
+                "text": "C0116, reported by pylint in the convention category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/missing-function-docstring.html",
+              "id": "missing-function-docstring",
+              "shortDescription": {
+                "text": "Missing function or method docstring"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0613, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0613, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/unused-argument.html>)",
+                "text": "W0613, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/unused-argument.html",
+              "id": "unused-argument",
+              "shortDescription": {
+                "text": "Unused argument 'request'"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R0913, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R0913, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-arguments.html>)",
+                "text": "R0913, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-arguments.html",
+              "id": "too-many-arguments",
+              "shortDescription": {
+                "text": "Too many arguments (8/5)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R0917, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R0917, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-positional-arguments.html>)",
+                "text": "R0917, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-positional-arguments.html",
+              "id": "too-many-positional-arguments",
+              "shortDescription": {
+                "text": "Too many positional arguments (8/5)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R0914, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R0914, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-locals.html>)",
+                "text": "R0914, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-locals.html",
+              "id": "too-many-locals",
+              "shortDescription": {
+                "text": "Too many local variables (21/15)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0212, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0212, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/protected-access.html>)",
+                "text": "W0212, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/protected-access.html",
+              "id": "protected-access",
+              "shortDescription": {
+                "text": "Access to a protected member _cookies of a client class"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "E1111, reported by pylint in the error category."
+              },
+              "help": {
+                "markdown": "E1111, reported by pylint in the error category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/error/assignment-from-no-return.html>)",
+                "text": "E1111, reported by pylint in the error category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/error/assignment-from-no-return.html",
+              "id": "assignment-from-no-return",
+              "shortDescription": {
+                "text": "Assigning result of a function call, where the function has no return"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R0912, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R0912, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-branches.html>)",
+                "text": "R0912, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-branches.html",
+              "id": "too-many-branches",
+              "shortDescription": {
+                "text": "Too many branches (13/12)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R0915, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R0915, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-statements.html>)",
+                "text": "R0915, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-statements.html",
+              "id": "too-many-statements",
+              "shortDescription": {
+                "text": "Too many statements (52/50)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R0902, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R0902, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-instance-attributes.html>)",
+                "text": "R0902, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-instance-attributes.html",
+              "id": "too-many-instance-attributes",
+              "shortDescription": {
+                "text": "Too many instance attributes (12/7)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R1721, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R1721, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/unnecessary-comprehension.html>)",
+                "text": "R1721, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/unnecessary-comprehension.html",
+              "id": "unnecessary-comprehension",
+              "shortDescription": {
+                "text": "Unnecessary use of a comprehension, use list(gen) instead."
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0104, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0104, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/pointless-statement.html>)",
+                "text": "W0104, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/pointless-statement.html",
+              "id": "pointless-statement",
+              "shortDescription": {
+                "text": "Statement seems to have no effect"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0611, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0611, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/unused-import.html>)",
+                "text": "W0611, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/unused-import.html",
+              "id": "unused-import",
+              "shortDescription": {
+                "text": "Unused REDIRECT_STATI imported from models"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0511, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0511, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/fixme.html>)",
+                "text": "W0511, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/fixme.html",
+              "id": "fixme",
+              "shortDescription": {
+                "text": "TODO: Remove this in 3.0.0: see #2811"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0622, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0622, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/redefined-builtin.html>)",
+                "text": "W0622, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/redefined-builtin.html",
+              "id": "redefined-builtin",
+              "shortDescription": {
+                "text": "Redefining built-in 'ConnectionError'"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "fullDescription": {
+                "text": "E0401, reported by pylint in the error category."
+              },
+              "help": {
+                "markdown": "E0401, reported by pylint in the error category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/error/import-error.html>)",
+                "text": "E0401, reported by pylint in the error category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/error/import-error.html",
+              "id": "import-error",
+              "shortDescription": {
+                "text": "Unable to import 'urllib3.exceptions'"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "C0103, reported by pylint in the convention category."
+              },
+              "help": {
+                "markdown": "C0103, reported by pylint in the convention category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/invalid-name.html>)",
+                "text": "C0103, reported by pylint in the convention category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/invalid-name.html",
+              "id": "invalid-name",
+              "shortDescription": {
+                "text": "Function name \"SOCKSProxyManager\" doesn't conform to snake_case naming style"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0404, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0404, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/reimported.html>)",
+                "text": "W0404, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/reimported.html",
+              "id": "reimported",
+              "shortDescription": {
+                "text": "Reimport 'PoolManager' (imported line 31)"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "C0413, reported by pylint in the convention category."
+              },
+              "help": {
+                "markdown": "C0413, reported by pylint in the convention category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/wrong-import-position.html>)",
+                "text": "C0413, reported by pylint in the convention category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/convention/wrong-import-position.html",
+              "id": "wrong-import-position",
+              "shortDescription": {
+                "text": "Import \"from ._types import is_prepared as _is_prepared\" should be placed at the top of the module"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0246, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0246, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/useless-parent-delegation.html>)",
+                "text": "W0246, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/useless-parent-delegation.html",
+              "id": "useless-parent-delegation",
+              "shortDescription": {
+                "text": "Useless parent or super() delegation in method '__init__'"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0707, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0707, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/raise-missing-from.html>)",
+                "text": "W0707, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/raise-missing-from.html",
+              "id": "raise-missing-from",
+              "shortDescription": {
+                "text": "Consider explicitly re-raising using 'raise InvalidURL(e, request=request) from e'"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "fullDescription": {
+                "text": "W0107, reported by pylint in the warning category."
+              },
+              "help": {
+                "markdown": "W0107, reported by pylint in the warning category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/unnecessary-pass.html>)",
+                "text": "W0107, reported by pylint in the warning category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/unnecessary-pass.html",
+              "id": "unnecessary-pass",
+              "shortDescription": {
+                "text": "Unnecessary pass statement"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R1720, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R1720, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/no-else-raise.html>)",
+                "text": "R1720, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/no-else-raise.html",
+              "id": "no-else-raise",
+              "shortDescription": {
+                "text": "Unnecessary \"elif\" after \"raise\", remove the leading \"el\" from \"elif\""
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "fullDescription": {
+                "text": "R0801, reported by pylint in the refactor category."
+              },
+              "help": {
+                "markdown": "R0801, reported by pylint in the refactor category.\n\n[More about this rule](<https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/duplicate-code.html>)",
+                "text": "R0801, reported by pylint in the refactor category."
+              },
+              "helpUri": "https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/duplicate-code.html",
+              "id": "duplicate-code",
+              "shortDescription": {
+                "text": "Similar lines in 2 files"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}
