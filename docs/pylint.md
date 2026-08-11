@@ -73,7 +73,7 @@ steps:
   - name: Lint
     run: pipx run pylint --exit-zero --output-format=json2 src > pylint.json
   - name: Convert to SARIF
-    uses: sarif-kit/sarif-kit@v0.2.0
+    uses: sarif-kit/sarif-kit@v0.3.0
     with:
       tool: pylint
       input: pylint.json

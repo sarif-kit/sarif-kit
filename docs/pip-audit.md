@@ -45,7 +45,7 @@ steps:
   - name: Audit dependencies
     run: pipx run pip-audit -r requirements.txt -f json > pip-audit.json || true
   - name: Convert to SARIF
-    uses: sarif-kit/sarif-kit@v0.2.0
+    uses: sarif-kit/sarif-kit@v0.3.0
     with:
       tool: pip-audit
       input: pip-audit.json

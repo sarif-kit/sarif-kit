@@ -32,7 +32,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/sarif-kit/sarif-kit:0.2.0'
+  image: 'docker://ghcr.io/sarif-kit/sarif-kit:0.3.0'
   # Passed explicitly instead of relying on the INPUT_* variables GitHub sets,
   # because a hyphenated input becomes INPUT_SRC-ROOT, which a shell cannot read.
   env:

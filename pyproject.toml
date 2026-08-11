@@ -1,6 +1,6 @@
 [project]
 name = "sarif-kit"
-version = "0.2.0"
+version = "0.3.0"
 description = "Convert native output of scanners/linters that lack SARIF support into valid SARIF 2.1.0 for GitHub Code Scanning."
 readme = "README.md"
 requires-python = ">=3.11"

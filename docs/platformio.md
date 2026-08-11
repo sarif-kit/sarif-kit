@@ -65,7 +65,7 @@ steps:
   - name: Static analysis
     run: pipx run platformio check --json-output > pio-check.json
   - name: Convert to SARIF
-    uses: sarif-kit/sarif-kit@v0.2.0
+    uses: sarif-kit/sarif-kit@v0.3.0
     with:
       tool: platformio
       input: pio-check.json

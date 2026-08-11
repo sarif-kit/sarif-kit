@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v0.3.0 (2026-08-11)
+
+### Documentation
+
+- Drop the stale status counts
+  ([`0f8dcb6`](https://github.com/sarif-kit/sarif-kit/commit/0f8dcb671cc906230de9126bdb01e88fdb20f983))
+
+- Mkdocs site on github pages
+  ([`8336445`](https://github.com/sarif-kit/sarif-kit/commit/8336445eaa0475fc267e433a42cfcc48636e2c5d))
+
+- Platformio alert screenshot
+  ([`4344870`](https://github.com/sarif-kit/sarif-kit/commit/4344870fb99721cdf8b653b0a8f40b3a50a4d4e1))
+
+### Features
+
+- Pylint adapter
+  ([`74d2897`](https://github.com/sarif-kit/sarif-kit/commit/74d28972e1607cabd656c5e94e8475770075dcef))
+
+
 ## v0.2.0 (2026-08-06)
 
 ### Features
