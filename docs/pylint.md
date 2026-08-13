@@ -61,6 +61,10 @@ because the mapping exists, not because a default run produces any.
 No `security-severity` is set, since nothing in pylint's output carries a CVSS score and
 sarif-kit does not invent one.
 
+## What it looks like
+
+![A pylint finding rendered as a GitHub Code Scanning alert](img/pylint-alert.jpg)
+
 ## Full workflow example
 
 ```yaml
@@ -95,7 +99,9 @@ steps:
   `line-too-long`, the rule is titled "Line too long (137/100)". Only its first line is
   used, because `duplicate-code` quotes the offending source into its message and eight
   lines of Python make a poor title. The finding keeps the whole text, so the duplicated
-  blocks are still there to read.
+  blocks are still there to read. Two findings of one symbol therefore share a title even
+  when they are about different things, two unused imports for instance; what tells them
+  apart is the message on each alert and the token highlighted in its snippet.
 - Messages with no end position, `line-too-long` among them, convert to a start position
   alone rather than an invented range.
 - Messages longer than 1024 characters are clipped with a `... (truncated)` marker, which
